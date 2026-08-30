@@ -3221,3 +3221,367 @@ input, select, textarea {
 			}
 
 	}
+
+/* Academic profile refinements */
+
+	:root {
+		--color-ink: #1f2933;
+		--color-body: #52606d;
+		--color-muted: #718096;
+		--color-accent: #147d75;
+		--color-accent-soft: #e8f4f2;
+		--color-border: #e5e9ec;
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body, input, select, textarea {
+		color: var(--color-body);
+		font-size: 17px;
+		line-height: 1.7;
+	}
+
+	a {
+		border-bottom-color: rgba(20, 125, 117, 0.35);
+		color: var(--color-accent);
+	}
+
+		a:hover {
+			color: #0f655f !important;
+		}
+
+	h1, h2, h3, h4, h5, h6,
+	strong, b {
+		color: var(--color-ink);
+		font-weight: 600;
+	}
+
+	h1 {
+		font-size: 2.35rem;
+	}
+
+	h2 {
+		font-size: 1.65rem;
+		letter-spacing: -0.015em;
+	}
+
+	h3 {
+		font-size: 1.15rem;
+		letter-spacing: 0.01em;
+	}
+
+	#header {
+		background-color: #102b33;
+		background-image: linear-gradient(160deg, rgba(11, 35, 43, 0.9), rgba(17, 64, 68, 0.78)), url("../../images/bg.jpg");
+		background-position: center, center;
+		background-size: cover, cover;
+		box-shadow: inset -1px 0 rgba(255, 255, 255, 0.08);
+		padding: 6em 3em;
+		width: 30%;
+	}
+
+		#header > .inner {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin-bottom: 4em;
+		}
+
+		#header .site-title {
+			font-size: 1.55rem;
+			letter-spacing: -0.02em;
+			margin-bottom: 0.4em;
+		}
+
+			#header .site-title a {
+				border-bottom: 0;
+				color: #ffffff;
+			}
+
+				#header .site-title a:hover {
+					color: #ffffff !important;
+				}
+
+		#header .site-tagline {
+			color: rgba(255, 255, 255, 0.62);
+			font-size: 0.9rem;
+			letter-spacing: 0.025em;
+			line-height: 1.6;
+			margin: 0 0 2.25em 0;
+		}
+
+	.site-nav ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+		.site-nav li {
+			padding: 0;
+		}
+
+		.site-nav a {
+			border-bottom: 0;
+			color: rgba(255, 255, 255, 0.64);
+			display: inline-block;
+			font-size: 0.82rem;
+			font-weight: 600;
+			letter-spacing: 0.09em;
+			padding: 0.28em 0;
+			text-transform: uppercase;
+		}
+
+			.site-nav a:hover {
+				color: #ffffff !important;
+			}
+
+	#footer {
+		bottom: 0;
+		left: 0;
+		padding: 0 3em 3em 3em;
+		position: fixed;
+		text-align: right;
+		width: 30%;
+		z-index: 1;
+	}
+
+		#footer .copyright {
+			color: rgba(255, 255, 255, 0.5);
+		}
+
+	#main {
+		margin-left: 30%;
+		max-width: 62em;
+		padding: 6em 4em 4em 4em;
+		width: 70%;
+	}
+
+		#main > section {
+			border-top: solid 1px var(--color-border);
+			margin-top: 3.5em;
+			padding-top: 3.5em;
+			scroll-margin-top: 2em;
+		}
+
+		#main section h2 {
+			margin-bottom: 0.65em;
+		}
+
+		#main section h2 + * {
+			margin-top: 0;
+			padding-top: 0;
+		}
+
+		#main section header.major {
+			margin-bottom: 1em;
+		}
+
+	.profile-name {
+		font-size: 2.65rem;
+		letter-spacing: -0.035em;
+		line-height: 1.15;
+		margin-bottom: 0.4em;
+	}
+
+	#about .icons {
+		margin: 0;
+	}
+
+		#about .icons .icon {
+			color: var(--color-muted);
+			display: inline-block;
+			transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+		}
+
+			#about .icons .icon:hover {
+				color: var(--color-accent) !important;
+				transform: translateY(-2px);
+			}
+
+	.icon.x-twitter:before {
+		content: "𝕏";
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: 400;
+	}
+
+	.research-summary {
+		color: #3f4d5a;
+		font-size: 1.08rem;
+		line-height: 1.65;
+		margin: 0 0 1.5em 0;
+		max-width: 42em;
+	}
+
+	.positions {
+		border-left: solid 3px var(--color-accent);
+		list-style: none;
+		margin: 0 0 1.6em 0;
+		padding: 0 0 0 1.1em;
+	}
+
+		.positions li {
+			margin: 0.35em 0;
+			padding: 0;
+		}
+
+	.research-interests {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.55em;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+		.research-interests li {
+			background: var(--color-accent-soft);
+			border: solid 1px rgba(20, 125, 117, 0.14);
+			border-radius: 999px;
+			color: #176b65;
+			font-size: 0.82rem;
+			font-weight: 600;
+			letter-spacing: 0.01em;
+			padding: 0.32em 0.8em;
+		}
+
+	#publications h3 {
+		color: #33404d;
+		margin: 2.25em 0 0.75em 0;
+	}
+
+		#publications h2 + h3 {
+			margin-top: 0.3em;
+		}
+
+	#publications ol {
+		margin-bottom: 1.75em;
+	}
+
+		#publications ol li {
+			margin-bottom: 1em;
+			padding-left: 0.45em;
+		}
+
+			#publications ol li:last-child {
+				margin-bottom: 0;
+			}
+
+	#publications u {
+		color: var(--color-ink);
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.resource-link {
+		border-bottom: 0;
+		font-size: 0.82em;
+		font-weight: 600;
+		letter-spacing: 0.02em;
+	}
+
+	#academic-service ul,
+	#biography ul {
+		margin-bottom: 0;
+	}
+
+	#academic-service li,
+	#biography li,
+	#book li,
+	#blogs li {
+		margin-bottom: 0.65em;
+	}
+
+	@media screen and (max-width: 980px) {
+
+		#header {
+			height: auto;
+			padding: 3.5em 2.5em;
+			position: relative;
+			text-align: center;
+			width: 100%;
+		}
+
+			#header > .inner {
+				align-items: center;
+				margin: 0;
+			}
+
+			#header .site-tagline {
+				margin-bottom: 1.5em;
+			}
+
+		.site-nav ul {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.45em 1.4em;
+			justify-content: center;
+		}
+
+		#main {
+			margin: 0;
+			max-width: none;
+			padding: 4em 3em;
+			width: 100%;
+		}
+
+		#footer {
+			background-color: #102b33;
+			background-image: linear-gradient(160deg, rgba(11, 35, 43, 0.92), rgba(17, 64, 68, 0.82)), url("../../images/bg.jpg");
+			background-position: center, bottom center;
+			background-size: cover, cover;
+			padding: 2.5em 2em;
+			position: relative;
+			text-align: center;
+			width: 100%;
+		}
+
+	}
+
+	@media screen and (max-width: 736px) {
+
+		body, input, select, textarea {
+			font-size: 16px;
+		}
+
+		#header {
+			padding: 2.75em 1.5em;
+		}
+
+		#main {
+			padding: 3em 1.5em 1em 1.5em;
+		}
+
+			#main > section {
+				margin-top: 2.75em;
+				padding-top: 2.75em;
+			}
+
+		.profile-name {
+			font-size: 2.15rem;
+		}
+
+		h2 {
+			font-size: 1.45rem;
+		}
+
+		h3 {
+			font-size: 1.08rem;
+		}
+
+		.research-interests {
+			gap: 0.45em;
+		}
+
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+
+		#about .icons .icon {
+			transition: none;
+		}
+	}
